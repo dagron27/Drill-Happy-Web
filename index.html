@@ -93,7 +93,7 @@ body {
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 <link rel="manifest" href="index.manifest.json">
-<style>#canvas{touch-action:none;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;}</style><script>document.addEventListener('contextmenu',function(e){e.preventDefault();},false);</script><script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistration().then(function(reg){if(!reg)return;function watch(w){if(!w)return;w.addEventListener('statechange',function(){if(w.state==='installed'&&navigator.serviceWorker.controller){w.postMessage('update');}});}watch(reg.waiting);reg.addEventListener('updatefound',function(){watch(reg.installing);});});}</script>
+<style>#canvas{touch-action:none;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;}</style><script>document.addEventListener('contextmenu',function(e){e.preventDefault();},false);</script><script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistration().then(function(reg){if(!reg)return;function trigger(w){if(w&&w.state==='installed'&&navigator.serviceWorker.controller){w.postMessage('update');}}function watch(w){if(!w)return;trigger(w);w.addEventListener('statechange',function(){trigger(w);});}watch(reg.waiting);reg.addEventListener('updatefound',function(){watch(reg.installing);});});}</script>
 	</head>
 	<body>
 		<canvas id="canvas">
