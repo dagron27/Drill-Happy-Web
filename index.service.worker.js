@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1788296216|8931409';
+const CACHE_VERSION = '1788297299|9163199';
 /** @type {string} */
 const CACHE_PREFIX = 'Drill-Happy-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
